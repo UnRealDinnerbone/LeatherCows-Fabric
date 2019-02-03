@@ -1,0 +1,10 @@
+{
+  "id": "leathercows",
+  "name": "Leather Cows",
+  "version": "1.0.0",
+  "side": "universal",
+  "initializer": "com.unrealdinnerbone.leathercows.LeatherCows",
+  "mixins": {
+    "common": "leathercows.common.json"
+  }
+}

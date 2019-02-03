@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "com.unrealdinnerbone.leathercows.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "ChickenEntityMixin",
+    "CowEntityMixin",
+    "MobEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
