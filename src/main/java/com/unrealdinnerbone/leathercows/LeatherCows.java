@@ -8,7 +8,7 @@ public class LeatherCows implements ModInitializer {
 
     @Override
 	public void onInitialize() {
-        System.out.println("Loading LeatherCows");
+        System.out.println("Loading LeatherCows!");
         LeatherCowItems.initItems();
     }
 }
