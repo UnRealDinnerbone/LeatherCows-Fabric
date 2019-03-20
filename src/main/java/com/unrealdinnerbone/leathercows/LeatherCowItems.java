@@ -14,6 +14,6 @@ public class LeatherCowItems
 
     public static void initItems() {
         itemGroup = FabricItemGroupBuilder.build(new Identifier(LeatherCows.MOD_ID, LeatherCows.MOD_ID), () -> new ItemStack(itemDropCalculator));
-        itemDropCalculator =  Registry.register(Registry.ITEM, new Identifier(LeatherCows.MOD_ID, "dropcalculator"), new DropCalculatorItem());
+        itemDropCalculator = Registry.register(Registry.ITEM, new Identifier(LeatherCows.MOD_ID, "dropcalculator"), new DropCalculatorItem());
     }
 }

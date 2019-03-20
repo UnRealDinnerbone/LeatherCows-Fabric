@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(MobEntity.class)
 public class MobEntityMixin {
 
-    @Inject(method = "interact(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/Hand;)Z", at = @At("HEAD"))
+//    @Inject(method = "interact(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/Hand;)Z", at = @At("HEAD"))
     public void onMobClick(PlayerEntity playerEntity, Hand hand, CallbackInfoReturnable callbackInfo) {
         DropCalculatorItem.onEntityClicked(playerEntity, hand, getThis());
     }

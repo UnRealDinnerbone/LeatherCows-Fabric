@@ -26,7 +26,7 @@ public abstract class CowEntityMixin extends AnimalEntity implements IDropperIte
     private int leatherDropTime;
     private boolean isPowerCow;
 
-    public CowEntityMixin(EntityType<?> entityType_1, World world_1) {
+    public CowEntityMixin(EntityType<? extends CowEntity> entityType_1, World world_1) {
         super(entityType_1, world_1);
     }
 

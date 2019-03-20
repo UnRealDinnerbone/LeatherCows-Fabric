@@ -28,7 +28,7 @@ public abstract class ChickenEntityMixin extends AnimalEntity implements IDroppe
     @Shadow
     public int eggLayTime;
 
-    public ChickenEntityMixin(EntityType<?> entityType_1, World world_1) {
+    public ChickenEntityMixin(EntityType<? extends CowEntity> entityType_1, World world_1) {
         super(entityType_1, world_1);
     }
 
