@@ -1,6 +1,8 @@
 package com.unrealdinnerbone.leathercows;
 
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.mob.MobEntity;
 
 public class LeatherCows implements ModInitializer {
 

@@ -1,10 +1,27 @@
 {
+  "schemaVersion": 1,
   "id": "leathercows",
-  "name": "Leather Cows",
   "version": "1.0.0",
-  "side": "universal",
-  "initializer": "com.unrealdinnerbone.leathercows.LeatherCows",
-  "mixins": {
-    "common": "leathercows.common.json"
+  "name": "Leather Cows",
+  "description": "Makes cows poop leather",
+  "authors": [
+    "UnRealDinnerbone"
+  ],
+  "icon": "assets/leathercows/logo.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.unrealdinnerbone.leathercows.LeatherCows"
+    ]
+  },
+  "mixins": [
+    {
+      "environment": "*",
+      "config": "leathercows.common.json"
+    }
+  ],
+  "requires": {
+    "fabricloader": "=>0.4.0",
+    "fabric": "*"
   }
 }
