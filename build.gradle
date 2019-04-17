@@ -15,7 +15,10 @@ buildscript {
 plugins {
 	id 'com.matthewprenger.cursegradle' version "1.1.2"
 }
+
 apply plugin: net.fabricmc.loom.LoomGradlePlugin
+
+apply from: 'https://raw.githubusercontent.com/MinecraftModDevelopment/Gradle-Collection/master/generic/markdown-git-changelog.gradle'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -44,7 +47,8 @@ curseforge {
 	}
 	project {
 		id = "${curseforge_id}"
-		changelog = 'Todo'
+		changelog = getGitChangelog
+		changelogType = 'markdown'
 		releaseType = 'release'
 		addGameVersion '1.14-Snapshot'
 	}
