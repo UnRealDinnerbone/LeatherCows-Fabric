@@ -18,7 +18,6 @@ public class DropCalculatorItem extends Item {
 
     public static void onEntityClicked(PlayerEntity playerEntity, Hand hand, MobEntity mobEntity) {
         if (!playerEntity.world.isClient()) {
-            System.out.println(playerEntity.getStackInHand(hand).getItem());
             if (playerEntity.getStackInHand(hand).getItem() instanceof DropCalculatorItem)
                 if (mobEntity instanceof IDropperItemEntity) {
                     IDropperItemEntity iDropperItemEntity = (IDropperItemEntity) mobEntity;

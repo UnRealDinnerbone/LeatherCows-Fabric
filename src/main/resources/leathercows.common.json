@@ -5,8 +5,7 @@
   "mixins": [
     "ChickenEntityMixin",
     "CowEntityMixin",
-    "MobEntityMixin",
-    "DeadMixin"
+    "MobEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -19,7 +19,6 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@Environment(EnvType.CLIENT)
 @Mixin(CowEntity.class)
 public abstract class CowEntityMixin extends AnimalEntity implements IDropperItemEntity {
 
@@ -48,9 +47,12 @@ public abstract class CowEntityMixin extends AnimalEntity implements IDropperIte
 
     @Override
     public void onStruckByLightning(LightningEntity lightningEntity) {
-        super.onStruckByLightning(lightningEntity);
-        isPowerCow = true;
-        this.addPotionEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 10, 10));
+        if(this.isPowerCow) {
+            super.onStruckByLightning(lightningEntity);
+        }else {
+            isPowerCow = true;
+            this.addPotionEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 10, 10));
+        }
     }
 
     @Override
