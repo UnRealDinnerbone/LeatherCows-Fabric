@@ -35,8 +35,8 @@ public abstract class CowEntityMixin extends AnimalEntity implements IDropperIte
     }
 
     @Override
-    public void updateMovement() {
-        super.updateMovement();
+    public void updateState() {
+        super.updateState();
         if (!this.world.isClient && !this.isChild() && --this.leatherDropTime <= 0) {
             this.playSound(SoundEvents.ENTITY_ITEM_PICKUP, 1.0F, (this.random.nextFloat() - this.random.nextFloat()) * 0.2F + 1.0F);
             this.dropItem(Items.LEATHER);
