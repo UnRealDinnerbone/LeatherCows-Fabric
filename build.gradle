@@ -50,7 +50,16 @@ curseforge {
 		changelog = getGitChangelog
 		changelogType = 'markdown'
 		releaseType = 'release'
-		addGameVersion '1.14'
+		addGameVersion "${minecraft_version}"
+		addGameVersion "Java 8"
+		addGameVersion "Fabric"
+		mainArtifact(file("${project.buildDir}/libs/${archivesBaseName}-${version}.jar"))
+		relations {
+			requiredDependency 'fabric-api'
+		}
+		afterEvaluate {
+			uploadTask.dependsOn(remapJar)
+		}
 	}
 	options{
 		forgeGradleIntegration = false
