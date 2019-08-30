@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "leathercows",
-  "version": "1.0.0",
+  "version": "${version]",
   "name": "Leather Cows",
   "description": "Makes cows poop leather",
   "authors": [
@@ -21,7 +21,6 @@
     }
   ],
   "depends": {
-    "fabricloader": "=>0.4.0",
     "fabric": "*"
   }
 }

@@ -25,12 +25,21 @@ targetCompatibility = 1.8
 
 def ENV = System.getenv()
 def buildVersion = ENV.BUILD_NUMBER ? "${mod_verison}.${ENV.BUILD_NUMBER}" : "${mod_verison}-beta"
-version = buildVersion + "-universal"
+version = "${minecraft_version}-" + buildVersion + "-universal"
 
-archivesBaseName = "${mod_name}"
+archivesBaseName = "${mod_name}-Fabirc"
 
-minecraft {
+processResources {
+	inputs.property "version", project.version
 
+	from(sourceSets.main.resources.srcDirs) {
+		include "fabric.mod.json"
+		expand "version": project.version
+	}
+
+	from(sourceSets.main.resources.srcDirs) {
+		exclude "fabric.mod.json"
+	}
 }
 
 dependencies {
